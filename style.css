@@ -39,19 +39,17 @@ body {
 }
 
 #hero {
-    width: 100%;
-    height: 100vh;
+    width: auto;
+    height: auto;
     background: linear-gradient( to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3) ), url("Media/hero-image.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
     padding-top: 20px;
 }
 
 .container{
-    max-width: 1140px;
-    margin: 0 auto;
+    margin: 0 120px;
 }
 
 .navbar .header-menu__line-top {
@@ -78,6 +76,7 @@ body {
     border-left-width: 1px;
     display:flex;
     align-items:center;
+    margin-left:10px;
 }
 
 .navbar {
@@ -121,7 +120,8 @@ body {
 }
 
 .hero-box {
-    width:50%;
+    width:47vw;
+    max-width:1300px;
     margin-top: 120px;
 }
 
@@ -141,7 +141,7 @@ body {
 }
 
 .hero-box .btn-box{
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
     .hero-box .cta-btn {
@@ -151,22 +151,72 @@ body {
         border-radius: 1px;
         color: #2e2c2c;
         transition-duration: 0.2s;
+        margin-left: -120px;
+        padding: 15px 40px 15px 180px;
     }
 
-    .hero-box .cta-btn.try::before{
-        background: yellow;
-        width:20px;
-        color: #2e2c2c;
-        transition-duration: 0.2s;
-    }
-
-    .hero-box .cta-btn:hover {
-        background: rgba(255,255,255,0.2);
-        color: white;
-        transition-duration: 0.2s;
-    }
+        .hero-box .cta-btn:hover {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            transition-duration: 0.2s;
+           padding: 15px 40px 15px 240px;
+        }
 
 .hero-box .demo{
     background:transparent;
     border: 1px solid white;
+}
+
+
+
+
+
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .container {
+        margin: 0 20px; /* Reduced side margins for smaller screens */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+        .navbar .menu a:not(:last-child) {
+            margin: 0px 10px; /* Reduce spacing */
+        }
+
+    .hero-box {
+        width: 100%; /* Full width on small screens */
+        margin-top: 60px; /* Reduced margin */
+    }
+
+        .hero-box .hero-heading {
+            font-size: 36px; /* Smaller font size */
+            line-height: 42px; /* Adjusted line height */
+        }
+
+        .hero-box .hero-desc {
+            font-size: 12px; /* Smaller font size */
+            line-height: 18px; /* Adjusted line height */
+            padding: 15px 0; /* Reduced padding */
+        }
+
+        .hero-box .cta-btn {
+            margin-left: 0; /* Adjust button alignment */
+            padding: 10px 20px; /* Smaller button padding */
+        }
+
+            .hero-box .cta-btn:hover {
+                padding: 10px 20px; /* Keep consistent padding on hover */
+            }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .hero-box .hero-heading {
+        font-size: 24px; /* Even smaller font size */
+        line-height: 30px; /* Adjusted line height */
+    }
 }
