@@ -204,7 +204,7 @@ body {
         }
 
         .hero-box .cta-btn {
-            margin-left: 0; /* Adjust button alignment */
+            margin-left: -120px; /* Adjust button alignment */
             padding: 10px 20px; /* Smaller button padding */
         }
 
