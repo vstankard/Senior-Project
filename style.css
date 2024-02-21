@@ -14,6 +14,7 @@
 
 
 body {
+    background-color: #0A0A0A;
     font-family: "Montserrat";
     /* font-family: "operetta-12", serif; */
     font-weight: normal;
@@ -23,6 +24,32 @@ body {
 .h1 {
     font-family: "operetta-12", serif;
 }
+
+h2 {
+    color: white;
+    font-family: "operetta-12", serif;
+    font-size:40px;
+    font-weight:500;
+    line-height:65px;
+    margin-bottom:15px;
+}
+
+h3{
+    color:rgb(108 108 108);
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+p{
+    color:white;
+    font-size:14px;
+}
+
+.row{
+    margin:20px 60px;
+}
+
+
 
 /*------------header stuff------------*/
 
@@ -36,6 +63,18 @@ body {
 .logo-img {
     height: 50px;
     width:auto;
+}
+
+#centered {
+    display: flex;
+    justify-content: center;
+    float:right;
+}
+#textcolright{
+    margin-right:20px;
+}
+.column img{
+    width:90%;
 }
 
 #hero {
@@ -86,6 +125,25 @@ body {
 }
 
 
+.cta-btn {
+    background: white;
+    margin-right: 30px;
+    padding: 15px 40px;
+    border-radius: 1px;
+    color: #2e2c2c;
+    transition-duration: 0.2s;
+    padding: 15px 40px;
+}
+
+.btn-box {
+    margin-top:60px;
+}
+.cta-btn:hover {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    transition-duration: 0.2s;
+    padding: 15px 40px;
+}
 
 
 .navbar .menu a:not(:last-child) {
@@ -170,8 +228,6 @@ body {
 
 
 
-
-
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
     .container {
@@ -213,10 +269,182 @@ body {
             }
 }
 
+/*-----------Featured Listings--------*/
+
+.property-card:after {
+  content: '';
+  background: transparent;
+  border: 1px solid #474747;
+  top: 14px;
+  right: 14px;
+  bottom: -14px;
+  left: -14px;
+  position: absolute;
+  z-index: -1;
+}
+
+/*Cards*/
+.property-card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  font-family: montserrat;
+  margin: 20px;
+  .tag {
+    position: absolute;
+    background-color: white;
+    top: 15px;
+    width: auto;
+    height: 50px;
+    border-radius: 0px 1px 1px 0px;
+    transition: .5 ease;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	
+    h2 {
+      color: black;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding: 0px 15px;
+      font-weight: 400;
+      font-size: 15px;
+	  font-family:Montserrat;
+    }
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(48,48,48,0.68);
+  overflow: hidden;
+  width: 100%;
+  height: 80px;
+  transition: .5s ease;
+  }
+  .card-content {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  
+    .property-name {
+      font-weight: 700;
+      font-size: 25px;
+      margin-top: 0px;
+      margin-bottom:0px;
+      text-align: left;
+	  font-family: "operetta-12";
+    }
+    .suburb {
+      margin-top: 5px;
+      font-size: 20px;
+      font-weight: 400;
+      text-align: left;
+	  margin-bottom:20px
+    }
+    .listing-button {
+      position: absolute;
+      top: 340px;
+      padding: 10px;
+      width: 125px;
+      margin-left: -60px;
+      border-radius: 0px;
+      border: none;
+      background-color: black;
+      color: white;
+    }
+    p {
+      font-size: 12px;
+      text-align: left;
+    }
+    .card-icons {
+      display: flex;
+      font-size: 10px;
+	  margin-bottom:20px;
+      p {
+        margin-left: 5px;
+      }
+    }
+  }
+  
+   
+
+
+}
+
+.property-card:hover .overlay {
+  height: 100%;
+}
+
+.property-card:hover .tag {
+  opacity: 50%;
+}
+
+/* container */
+.responsive-three-columns {
+    display:flex;
+    flex-wrap:wrap;
+	margin:auto;
+}
+
+/* columns */
+.responsive-three-columns > * {
+    width:100%;
+    padding:1rem;
+}
+
+.three-col-column {display: flex; justify-content:center;}
+
+/* tablet breakpoint */
+@media (min-width:768px) {
+    .responsive-three-columns > * {
+        width:calc(100% / 3);
+    }
+}
+
+
+/*one-col-center*/
+.one-col-center{
+	display:flex;
+	justify-content:center;
+	margin:30px;
+}
+
+#centerbtn{
+	margin:auto;
+}
 @media only screen and (max-width: 480px) {
     /* Further adjustments for very small screens */
     .hero-box .hero-heading {
         font-size: 24px; /* Even smaller font size */
         line-height: 30px; /* Adjusted line height */
+    }
+}
+
+.column {
+    float: left;
+    width: 48%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
     }
 }
