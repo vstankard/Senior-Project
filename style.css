@@ -276,6 +276,8 @@ p{
 	padding:80px 60px 80px 60px;
 	align-items:center;
 background: linear-gradient( to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("Media/hero-image.jpg");
+background-size:cover;
+background-position:center;
 }
 
 #cta #textcolright{
