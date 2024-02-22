@@ -269,6 +269,136 @@ p{
             }
 }
 
+/* --------cta--------*/
+
+#cta .row{
+	margin:50px 0px;
+	padding:80px 60px 80px 60px;
+	align-items:center;
+background: linear-gradient( to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("Media/hero-image.jpg");
+}
+
+#cta #textcolright{
+	margin-top:50px;
+	margin-left:20px;
+	display:grid;
+	justify-content:center;
+}
+#cta #textcolright .btn-box{
+	margin-top:20px;
+}
+#textcolright .btn-box{
+	margin-bottom:40px;
+}
+
+
+.form-cntnr{
+	width: 500px;
+	font-family: 'Sk-Modernist';
+	background-color:#171719BB;
+	box-shadow: 0px 12px 16px -1px rgba(0,0,0,0.53);
+	border-radius:2px;
+	padding-top:30px;
+}
+
+legend { 
+  font-size: 40px;
+height:65px;
+  color: #E8EAF6;
+    width: 100%;
+    margin: 0;
+	font-family: 'Sk-Modernist';
+	text-align:center;
+}
+
+fieldset {
+   margin: 0;
+   padding: 10px;
+   width: 100%;
+   border: none;
+   font-family: 'Sk-Modernist';
+}
+form p {
+   margin-top: 0.5em;
+   padding:10px;
+}
+
+
+table{
+	table-layout:fixed;
+	width:100%;
+	padding:10px;
+	border-spacing: 10px;
+	padding:10px;
+} 
+
+input[type=text], textarea{
+	width:75%;
+	margin-right:15px;
+	margin-bottom:20px;
+	font-family: 'Sk-Modernist';
+	padding:5px 10px;
+	font-size:18px;
+	background-color:transparent;
+	color:white;
+	border: 0px solid;
+	border-bottom: 1px solid white;
+}
+
+textarea{
+	width:93%;
+	margin-top:-15px;
+}
+
+.banner{
+	padding:5px;
+}
+
+.bord{
+	border: solid 1.5px #9FA8DA;
+	padding:10px 5px;
+}
+
+input[type=number]{
+	width:40px;
+	font-family: 'Sk-Modernist';
+}
+
+input[type=submit], input[type=reset]{
+	font-size: 18px;
+color: #222123;
+background-color: #ffffff;
+padding: 4px 0px 8px;
+border: solid #ffffff 0px;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+box-shadow: 0px 12px 16px -1px rgba(0,0,0,0.53);
+border-radius: 1px;
+transition : 200ms;
+transform: translateY(0);
+flex-direction:row-reverse;
+align-items: center;
+cursor: pointer;
+width:156px;
+text-decoration: none;
+align-items:center;
+    background: white;
+    margin-right: 30px;
+    padding: 15px 40px;
+    border-radius: 1px;
+    color: #2e2c2c;
+    transition-duration: 0.2s;
+    padding: 15px 40px;
+	font-weight: 400;
+}
+
+input[type=submit]:hover, input[type=reset]:hover{
+color: #ffffff;
+background-color: #131313;	
+}
+
+input[type=submit]{
+	margin-right:80px;
+	}
 /*-----------Featured Listings--------*/
 
 .property-card:after {
@@ -361,6 +491,7 @@ p{
       border: none;
       background-color: black;
       color: white;
+      font-size:12px;
     }
     p {
       font-size: 12px;
@@ -372,6 +503,9 @@ p{
 	  margin-bottom:20px;
       p {
         margin-left: 5px;
+      }
+      .card-icon{
+          margin:0px 5px -5px 0px;
       }
     }
   }
@@ -442,7 +576,7 @@ p{
     clear: both;
 }
 
-/* Responsive layout - when the screen is less than 600p x wide, make the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
